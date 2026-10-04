@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-brand-bg: #F5F8FC;
+  --color-brand-bg-alt: #EEF4FA;
+  --color-brand-surface: #FFFFFF;
+  --color-brand-text: #071126;
+  --color-brand-text-muted: #5B667A;
+  --color-brand-blue: #526FF5;
+  --color-brand-blue-light: #7B8CFF;
+  --color-brand-dark: #0A1428;
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #F5F8FC;
+  color: #071126;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.025em;
+  color: #071126;
+}
+
+/* Studio Technical Grid */
+.studio-grid-pattern {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(20, 40, 70, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(20, 40, 70, 0.035) 1px, transparent 1px);
+}
+
+/* Soft Glass Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.76);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 16px 36px -4px rgba(7, 17, 38, 0.10),
+    0 4px 12px -2px rgba(7, 17, 38, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(20, 40, 70, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(10, 20, 40, 0.04);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(20, 40, 70, 0.08);
+  box-shadow: 0 2px 12px rgba(10, 20, 40, 0.04);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F8FC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
